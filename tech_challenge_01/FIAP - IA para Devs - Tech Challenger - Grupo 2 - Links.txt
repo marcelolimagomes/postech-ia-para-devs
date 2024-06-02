@@ -1,0 +1,13 @@
+1o Tech Challenger
+
+Data Gravação Vídeo: 27/05/2024
+IA para Devs - Grupo 2
+
+Integrantes: 
+MARCELO LIMA GOMES - RM355733 - marcelolimagomes@gmail.com
+Felipe Moraes - RM355352 - felipemoraes.ti@outlook.com
+Francisco Antonio Guilherme - RM353876 - fagn2013@gmail.com
+
+1. Link para o Jupyter Notebook: https://drive.google.com/file/d/1Tf7XBHHOxWBSgKvpL3SD5_qdmWkdBu2R/view?usp=drive_link
+2. Link para base de dados: https://drive.google.com/file/d/13wuObt_NwSSNScyyJesmyNQn9JIz8aTX/view?usp=sharing
+3. Link para o vídeo: https://drive.google.com/file/d/1f7xuIVmU7MiMMcfDZUc3qtuhKqrI8bxB/view?usp=sharing
