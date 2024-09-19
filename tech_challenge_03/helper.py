@@ -1,4 +1,5 @@
 from unsloth import FastLanguageModel
+from transformers import TextStreamer
 import torch
 
 # 4bit pre quantized models we support for 4x faster downloading + no OOMs.
@@ -19,42 +20,28 @@ fourbit_models = [
     "unsloth/gemma-2-27b-bnb-4bit",            # Gemma 2x faster!
 ]  # More models at https://huggingface.co/unsloth
 
-alpaca_prompt = """Below is an instruction that describes a task, paired with an input that provides further context. Write a response that appropriately completes the request.
+
+alpaca_prompt_old = """Below is an instruction that describes a product, paired with an title that provides description about it. Write a response that appropriately completes the request.
 
 ### Instruction:
 Based on title of a product, get the real description for the follow product.
 
-### Input:
+### Title:
 {}
 
-### Response:
+### Description:
+{}"""
+
+alpaca_prompt = """Below is an instruction that describes a product, paired with an title that provides description about it. Write a response that appropriately completes the request.
+
+### Title:
+{}
+
+### Description:
 {}"""
 
 
 def get_model_by_id(id, max_seq_length, dtype, load_in_4bit):
-  """
-    ID - Model Name
-    0. unsloth/Meta-Llama-3.1-8B,               # Default
-    1. unsloth/Meta-Llama-3.1-8B-bnb-4bit,      # Llama-3.1 15 trillion tokens model 2x faster!
-    2. unsloth/Meta-Llama-3.1-8B-Instruct-bnb-4bit,
-    3. unsloth/Meta-Llama-3.1-70B-bnb-4bit,
-    4. unsloth/Meta-Llama-3.1-405B-bnb-4bit,    # We also uploaded 4bit for 405b!
-    5. unsloth/Mistral-Nemo-Base-2407-bnb-4bit, # New Mistral 12b 2x faster!
-    6. unsloth/Mistral-Nemo-Instruct-2407-bnb-4bit,
-    7. unsloth/mistral-7b-v0.3-bnb-4bit,        # Mistral v3 2x faster!
-    8. unsloth/mistral-7b-instruct-v0.3-bnb-4bit,
-    9. unsloth/Phi-3.5-mini-instruct,           # Phi-3.5 2x faster!
-    10. unsloth/Phi-3-medium-4k-instruct,
-    11. unsloth/gemma-2-9b-bnb-4bit,
-    12. unsloth/gemma-2-27b-bnb-4bit,            # Gemma 2x faster!  
-
-  Args:
-      id (int): Id listed above 
-
-  Returns:
-      model, tokenizer : model, tokenizer 
-  """
-
   print(f'Id Model: {id} - Model Name: {fourbit_models[id]}')
   raw_model, tokenizer = FastLanguageModel.from_pretrained(
       model_name=fourbit_models[id],
@@ -96,7 +83,6 @@ def predict_text_streamer(model, tokenizer, title):
           )
       ], return_tensors="pt").to("cuda")
 
-  from transformers import TextStreamer
   text_streamer = TextStreamer(tokenizer)
   _ = model.generate(**inputs, streamer=text_streamer, max_new_tokens=128)
 
@@ -129,15 +115,15 @@ def print_final_memory_usage(start_gpu_memory, max_memory, trainer_stats):
 def get_fast_language_model(raw_model):
   return FastLanguageModel.get_peft_model(
       raw_model,
-      r=32,  # Choose any number > 0 ! Suggested 8, 16, 32, 64, 128
+      r=16,  # Choose any number > 0 ! Suggested 8, 16, 32, 64, 128
       target_modules=["q_proj", "k_proj", "v_proj", "o_proj",
                       "gate_proj", "up_proj", "down_proj",],
-      lora_alpha=32,
+      lora_alpha=16,
       lora_dropout=0,  # Supports any, but = 0 is optimized
       bias="none",    # Supports any, but = "none" is optimized
       # [NEW] "unsloth" uses 30% less VRAM, fits 2x larger batch sizes!
       use_gradient_checkpointing="unsloth",  # True or "unsloth" for very long context
       random_state=3407,
-      use_rslora=False,  # We support rank stabilized LoRA
+      use_rslora=True,  # We support rank stabilized LoRA
       loftq_config=None,  # And LoftQ
   )
