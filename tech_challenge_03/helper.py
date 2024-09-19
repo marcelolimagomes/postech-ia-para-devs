@@ -32,12 +32,15 @@ Based on title of a product, get the real description for the follow product.
 ### Description:
 {}"""
 
-alpaca_prompt = """Below is an instruction that describes a product, paired with an title that provides description about it. Write a response that appropriately completes the request.
+alpaca_prompt = """Below is a book that contains a title and description. 
 
-### Title:
+###INSTRUCTION:
+Write a resume description that appropriately corresponds to the title.
+
+###TITLE:
 {}
 
-### Description:
+###DESCRIPTION:
 {}"""
 
 
