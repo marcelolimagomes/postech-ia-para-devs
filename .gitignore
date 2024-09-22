@@ -34,6 +34,8 @@ llama*/
 ./llama*/
 ./llama*
 llama3.18B-Fine-tuned_FIAP/
+tinyllama_finetuned_FIAP/
+marcelolimagomes/
 chave.txt
 # PyInstaller
 #  Usually these files are written by a python script from a template
