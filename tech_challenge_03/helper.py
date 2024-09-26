@@ -57,6 +57,19 @@ def get_model_by_id(id, max_seq_length, dtype, load_in_4bit):
   return fourbit_models[id], raw_model, tokenizer
 
 
+def get_model_by_name(name, max_seq_length, dtype, load_in_4bit):
+  print(f'Model Name: {name}')
+  raw_model, tokenizer = FastLanguageModel.from_pretrained(
+      model_name=name,
+      max_seq_length=max_seq_length,
+      dtype=dtype,
+      load_in_4bit=load_in_4bit,
+      revision='main'
+      # token = "hf_..., # use one if using gated models like meta-llama/Llama-2-7b-hf
+  )
+  return raw_model, tokenizer
+
+
 def predict(model, tokenizer, title):
   # alpaca_prompt = Copied from above
   FastLanguageModel.for_inference(model)  # Enable native 2x faster inference

@@ -36,6 +36,9 @@ llama*/
 llama3.18B-Fine-tuned_FIAP/
 tinyllama_finetuned_FIAP/
 marcelolimagomes/
+tinyllama_finetuned*/
+tinyllama_finetuned
+_unsloth_sentencepiece_temp
 chave.txt
 # PyInstaller
 #  Usually these files are written by a python script from a template
