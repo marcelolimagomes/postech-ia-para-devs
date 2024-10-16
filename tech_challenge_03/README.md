@@ -25,6 +25,8 @@ dados da sua descrição.
 
 ## Descrição do processo de seleção e preparação do dataset:
 
+** >> Vídeo do projeto: https://drive.google.com/file/d/1qYxyD9Azbamqx3ly0xTUgAJaO3m3S2Ul/view?usp=sharing
+
 - Foi escolhido o dataset "The AmazonTitles-1.3MM" conforme orientado no enunciado do Tech Challenge 03.
 - O processo de preparação foi aplicado.
  * Conversão dos caracteres especiais no padrão HTML para Texto Unicode utilizando a biblioteca python "html";
