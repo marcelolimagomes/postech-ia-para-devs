@@ -1,0 +1,102 @@
+type;name;count
+emotion;sad;1687
+emotion;fear;1177
+emotion;neutral;1040
+emotion;happy;865
+emotion;angry;384
+emotion;surprise;171
+activity;lab coat;776
+activity;breastplate;533
+activity;dining table;477
+activity;mask;401
+activity;restaurant;319
+activity;maillot;186
+activity;studio couch;184
+activity;barber chair;180
+activity;stretcher;159
+activity;barbershop;126
+activity;neck brace;121
+activity;television;96
+activity;electric fan;88
+activity;desk;86
+activity;turnstile;81
+activity;comic book;80
+activity;Windsor tie;76
+activity;prison;73
+activity;barbell;71
+activity;sliding door;71
+activity;monitor;70
+activity;brassiere;68
+activity;cellular telephone;68
+activity;oxygen mask;58
+activity;hook;56
+activity;ski mask;55
+activity;bathtub;54
+activity;stethoscope;50
+activity;jinrikisha;48
+activity;steel drum;46
+activity;bathing cap;43
+activity;bullet train;40
+activity;bow tie;39
+activity;web site;36
+activity;crutch;33
+activity;spotlight;29
+activity;toaster;27
+activity;balance beam;26
+activity;motor scooter;21
+activity;suit;18
+activity;abaya;18
+activity;microphone;16
+activity;medicine chest;16
+activity;Band Aid;13
+activity;parallel bars;11
+activity;piggy bank;11
+activity;electric ray;9
+activity;book jacket;9
+activity;window shade;8
+activity;chain mail;8
+activity;dumbbell;8
+activity;vase;8
+activity;horizontal bar;7
+activity;water bottle;6
+activity;jean;6
+activity;torch;6
+activity;file;6
+activity;jellyfish;6
+activity;bonnet;5
+activity;gondola;5
+activity;seat belt;5
+activity;shower cap;4
+activity;envelope;4
+activity;washer;4
+activity;cleaver;4
+activity;soap dispenser;4
+activity;mortarboard;4
+activity;toilet seat;4
+activity;crash helmet;3
+activity;nipple;3
+activity;harmonica;3
+activity;syringe;3
+activity;chain;2
+activity;can opener;2
+activity;cuirass;2
+activity;switch;2
+activity;potter's wheel;2
+activity;hatchet;2
+activity;bulletproof vest;1
+activity;bubble;1
+activity;sunscreen;1
+activity;bow;1
+activity;tennis ball;1
+activity;hand blower;1
+activity;hourglass;1
+activity;binoculars;1
+activity;matchstick;1
+activity;shower curtain;1
+activity;black widow;1
+activity;wall clock;1
+activity;rhinoceros beetle;1
+activity;Petri dish;1
+activity;perfume;1
+activity;nematode;1
+activity;joystick;1
