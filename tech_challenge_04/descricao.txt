@@ -15,8 +15,6 @@
 #
 # Git hub do projeto: https://github.com/marcelolimagomes/postech-ia-para-devs/tree/main/tech_challenge_04
 #
-# Arquivo Jupyter com a solução: https://github.com/marcelolimagomes/postech-ia-para-devs/blob/main/tech_challenge_04/tech_challenge_04.ipynb
-#
 # Grupo 44
 # Francisco Antonio Guilherme
 # fagn2013@gmail.com
