@@ -7,5 +7,5 @@ PyWavelets==1.5.0
 matplotlib==3.8.2
 pandas==2.1.4
 pytorch==2.4.1
-torchvision==0.19.1
+torchvision==0.20
 torchaudio==2.4.1 
