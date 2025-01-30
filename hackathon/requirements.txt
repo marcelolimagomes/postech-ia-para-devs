@@ -1,0 +1,11 @@
+ultralytics==8.0.203
+opencv-contrib-python==4.8.0.76
+opencv-python==4.8.0.76
+opencv-python-headless==4.8.0.74
+numpy==1.24.3
+PyWavelets==1.5.0
+matplotlib==3.8.2
+pandas==2.1.4
+pytorch==2.4.1
+torchvision==0.19.1
+torchaudio==2.4.1 
